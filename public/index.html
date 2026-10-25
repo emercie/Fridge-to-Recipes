@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f5ef">
+    <title>Fridge to Recipes</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="masthead">
+        <a class="brand" href="/" aria-label="Fridge to Recipes home"><span class="brand-icon">✳</span> goodfood<span class="brand-dot">.</span></a>
+        <span class="eyebrow">YOUR FRIDGE, REIMAGINED</span>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="kicker"><span></span> A LITTLE LESS WASTE, A LOT MORE TASTE</p>
+          <h1 id="page-title">What's in your<br><em>fridge</em> tonight?</h1>
+          <p class="intro">Tell us what you have. We'll turn it into something worth sitting down for.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true"><span class="art-sun"></span><span class="art-leaf leaf-one">✳</span><span class="art-leaf leaf-two">✳</span><span class="art-plate"><span>🥑</span></span><span class="art-spark">✦</span></div>
+      </section>
+
+      <section class="workspace" aria-label="Recipe generator">
+        <form id="recipe-form" class="preferences-card">
+          <div class="section-heading"><span class="step-number">01</span><div><h2>Start with what you have</h2><p>Ingredients are the only must-have.</p></div></div>
+          <label for="ingredients">IN YOUR FRIDGE</label>
+          <textarea id="ingredients" name="ingredients" rows="3" placeholder="e.g. tomatoes, eggs, spinach, feta" required></textarea>
+          <div class="form-grid">
+            <div class="field"><label for="dietary">DIETARY NEEDS <span>OPTIONAL</span></label><input id="dietary" name="dietary" type="text" placeholder="e.g. vegetarian, gluten-free"></div>
+            <div class="field"><label for="cuisine">MOOD OR CUISINE <span>OPTIONAL</span></label><input id="cuisine" name="cuisine" type="text" placeholder="e.g. Italian, comfort food"></div>
+            <div class="field"><label for="max-time">TIME YOU HAVE <span>OPTIONAL</span></label><div class="input-suffix"><input id="max-time" name="maxTime" type="number" min="1" step="1" placeholder="30"><span>MIN</span></div></div>
+            <div class="field"><label for="servings">HOW MANY HUNGRY? <span>OPTIONAL</span></label><div class="input-suffix"><input id="servings" name="servings" type="number" min="1" step="1" placeholder="2"><span>PEOPLE</span></div></div>
+          </div>
+          <button class="submit-button" type="submit"><span>Find my recipes</span><span aria-hidden="true">↗</span></button>
+          <p class="privacy-note"><span aria-hidden="true">✳</span> Made for your kitchen, one meal at a time.</p>
+        </form>
+
+        <section id="results" class="results" aria-live="polite" aria-busy="false">
+          <div class="empty-state"><span class="empty-icon">✳</span><p class="kicker">THE GOOD PART</p><h2>Your next favorite<br>meal starts here.</h2><p>Three thoughtful recipes, made around the ingredients you already have.</p><span class="empty-decoration">✳</span></div>
+        </section>
+      </section>
+      <footer><span>GOOD FOOD, LESS FUSS.</span><span>MADE WITH WHAT YOU HAVE <b>✳</b></span></footer>
+    </main>
+  </body>
+</html>
